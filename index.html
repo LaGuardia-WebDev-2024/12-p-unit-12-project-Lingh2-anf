@@ -19,8 +19,25 @@ Select ONE Additional
   <head>
     <meta charset="utf-8" />
     <title>Unit 12 Project</title>
+    
     <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
+    <style>
+      body {font-family: cursive;}
+      
+      .photo {
+        width: 300px;
+        margin: 20px;
+        border: 5px solid lightblue;
+        padding 5px;
+      }
+      
+      .Crocodile {
+        color: blue;
+        font-family: fantasy;
+      }
+      
+    </style> 
+  </head>  
   <body>
     <button id="mem1-button">Memory #1</button>
     <button id="mem2-button">Memory #2</button>
@@ -29,34 +46,52 @@ Select ONE Additional
     <ol>
       <li>
         <h3 id="mem1">Memory #1</h3>
-        <p>More about this memory.</p>
+        <p id="picture"> More about this memory.</p>
       </li>
+      
+      <img class="photo" src="https://cdn.glitch.global/e41dbdc3-e57a-47b2-95a4-23502a7b7d17/ff68f48a-bfb9-45a5-a4cb-055298a5a338.With%20Firend.jpg?v=1749779465060" width ="200">
 
       <li>
         <h3 id="mem2">Memory #2</h3>
-        <p>More about this memory.</p>
+        <p class="sunset"> More about this memory.</p>
       </li>
+      
+      <img class="photo" src="https://cdn.glitch.global/e2e76e17-0d4f-4fd1-b740-9f45a347f027/203873de-37a8-4134-9b6d-b36e42b05086.sunset.jpg?v=1749784950028" width="200">
 
       <li>
         <h3 id="mem3">Memory #3</h3>
-        <p>More about this memory</p>
+        <p id="wew2">More about this memory</p>
       </li>
+      
+      <img class="photo" src="https://cdn.glitch.global/e2e76e17-0d4f-4fd1-b740-9f45a347f027/62ffa81c-8019-4adb-b8a8-575ebbb45148.Group%20picture%20with%20friend.jpg?v=1749785925029" width="200">
     </ol>
+    
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
       $("#mem1-button").click(function () {
         $("#mem1").css("color", "purple");
+        $("#picture").text("We wnet to a babo tea shop with my friends to take photos. The decoration of the shop was very beautiful and the style was specially designed for customers taking pictures.");
       });
-
-      $("#mem2-button").click(function () {
+    
+    $("#mem2-button").click(function () {
         $("#mem2").css("color", "blue");
+      $(".sunset").text("There is a free ferry to Staten Island at Line #1, it called South Ferry. We saw the Statue of Liberty there. We went there at sunset and it was so beautiful landscape.");
       });
-
+   
       $("#mem3-button").click(function () {
         $("#mem3").css("color", "green");
+        $("#wew2").text("A beautiful group photo");
       });
+
+    
+      $("h3").text("Memories With Friends");
+      $("p").css("color","pink");
+      $("h3").addClass("Crocodile");
+      
+      
     </script>
+    
   </body>
 </html>
 
